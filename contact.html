@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Bay Founders Collective</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN1PTV33P4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RN1PTV33P4');
+  </script>
+</head>
+<body class="light-mode">
+  <header>
+    <div class="container">
+      <h1>Bay Founders Collective</h1>
+      <nav class="container">
+        <a href="index.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Home'})">Home</a>
+        <a href="about.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'About'})">About</a>
+        <a href="founders.html" class="box">Founders</a>
+        <a href="resources.html" class="box">Resources</a>
+        <a href="gallery.html" class="box">Gallery</a>
+        <a href="contact.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Contact'})">Contact</a>
+      </nav>
+      <button id="themeToggle">Toggle Dark/Light</button>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Get in Touch</h2>
+      <p>We're excited to hear from you! Whether you're a founder, investor, or community member, drop us a line.</p>
+
+      <form class="contact-form" action="mailto:info@congiviewsolutions.com" method="POST" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="Message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bay Founders Collective</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

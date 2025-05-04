@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources | Bay Founders Collective</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN1PTV33P4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RN1PTV33P4');
+  </script>
+</head>
+<body class="light-mode">
+  <header>
+    <div class="container">
+      <h1>Bay Founders Collective</h1>
+      <nav class="container">
+        <a href="index.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Home'})">Home</a>
+        <a href="about.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'About'})">About</a>
+        <a href="founders.html" class="box">Founders</a>
+        <a href="resources.html" class="box">Resources</a>
+        <a href="gallery.html" class="box">Gallery</a>
+        <a href="contact.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Contact'})">Contact</a>
+      </nav>
+      <button id="themeToggle">Toggle Dark/Light</button>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Founder Resources</h2>
+
+      <div class="resource-card">
+        <h3>🗓️ Events</h3>
+        <p>Attend networking nights, demo days, and investor panels hosted around the Bay Area.</p>
+        <div class="calendar-placeholder">[Calendar Widget Coming Soon]</div>
+      </div>
+
+      <div class="resource-card">
+        <h3>🚀 Accelerators</h3>
+        <div class="accelerator-list">
+          <div class="accelerator-item">
+            <h4>Y Combinator</h4>
+            <p>The most renowned early-stage startup accelerator in the world. Batch-based mentorship and funding.</p>
+          </div>
+          <div class="accelerator-item">
+            <h4>Techstars</h4>
+            <p>Funding and 3-month mentorship-driven programs in key verticals like fintech, AI, and mobility.</p>
+          </div>
+          <div class="accelerator-item">
+            <h4>500 Startups</h4>
+            <p>Global venture capital firm offering accelerator programs in growth hacking and product-market fit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <h3>📄 Pitch Deck Templates</h3>
+        <p>We’re collecting sample decks from top startups and experts. Check back soon!</p>
+        <div class="loading-box">Loading soon...</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bay Founders Collective</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Bay Founders Collective</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN1PTV33P4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RN1PTV33P4');
+  </script>
+</head>
+<body class="light-mode">
+  <header>
+    <div class="container">
+      <h1>Bay Founders Collective</h1>
+      <nav class="container">
+        <a href="index.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Home'})">Home</a>
+        <a href="about.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'About'})">About</a>
+        <a href="founders.html" class="box">Founders</a>
+        <a href="resources.html" class="box">Resources</a>
+        <a href="gallery.html" class="box">Gallery</a>
+        <a href="contact.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Contact'})">Contact</a>
+      </nav>
+      <button id="themeToggle">Toggle Dark/Light</button>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Photo Gallery</h2>
+      <p>Moments from our events, founders in action, and the energy of innovation.</p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://source.unsplash.com/800x500/?startup,teamwork" alt="Startup team collaboration" />
+          <p>Founders working together on product strategy</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://source.unsplash.com/800x500/?san-francisco,skyline" alt="San Francisco skyline" />
+          <p>Golden Gate vibes during our outdoor pitch event</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://source.unsplash.com/800x500/?presentation,tech" alt="Tech event presentation" />
+          <p>Live pitch night at a local accelerator showcase</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://source.unsplash.com/800x500/?coworking,office" alt="Coworking space" />
+          <p>Daily hustle at our Bay Area coworking partner</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://source.unsplash.com/800x500/?brainstorming,startup" alt="Startup brainstorming" />
+          <p>Founder sprints and design jam sessions</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://source.unsplash.com/800x500/?coding,hackathon" alt="Hackathon scene" />
+          <p>Community hackathon for social impact ideas</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bay Founders Collective</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
