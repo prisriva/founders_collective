@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Founders | Bay Founders Collective</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN1PTV33P4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RN1PTV33P4');
+  </script>
+</head>
+<body class="light-mode">
+  <header>
+    <div class="container">
+      <h1>Bay Founders Collective</h1>
+      <nav class="container">
+        <a href="index.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Home'})">Home</a>
+        <a href="about.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'About'})">About</a>
+        <a href="founders.html" class="box">Founders</a>
+        <a href="resources.html" class="box">Resources</a>
+        <a href="gallery.html" class="box">Gallery</a>
+        <a href="contact.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Contact'})">Contact</a>
+      </nav>
+      <button id="themeToggle">Toggle Dark/Light</button>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Meet the Founders</h2>
+      <input type="text" id="searchInput" placeholder="Search by name or company..." />
+
+      <div id="founderGrid" class="founder-grid">
+        <!-- Founder Card -->
+        <div class="founder-card" data-name="Samantha Chen" data-company="NeuraLink">
+          <div class="company-bg" style="background-image: url('https://via.placeholder.com/150x60?text=NeuraLink');">
+            <img src="https://via.placeholder.com/100" alt="Samantha Chen" class="profile-pic" />
+          </div>
+          <div class="founder-info">
+            <h3>Samantha Chen</h3>
+            <p>Founder of NeuraLink, focusing on brain-computer interface tools for neurodiverse teams.</p>
+            <a href="mailto:samantha@neuralink.com" class="contact-btn">Contact</a>
+          </div>
+        </div>
+
+        <!-- Duplicate with different data -->
+        <div class="founder-card" data-name="Raj Patel" data-company="EcoFleet">
+          <div class="company-bg" style="background-image: url('https://via.placeholder.com/150x60?text=EcoFleet');">
+            <img src="https://via.placeholder.com/100" alt="Raj Patel" class="profile-pic" />
+          </div>
+          <div class="founder-info">
+            <h3>Raj Patel</h3>
+            <p>Founder of EcoFleet, optimizing last-mile delivery with sustainable fleets and AI routing.</p>
+            <a href="mailto:raj@ecofleet.com" class="contact-btn">Contact</a>
+          </div>
+        </div>
+
+        <!-- More founder cards can go here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bay Founders Collective</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Search functionality
+    const searchInput = document.getElementById("searchInput");
+    const founderCards = document.querySelectorAll(".founder-card");
+
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.toLowerCase();
+      founderCards.forEach(card => {
+        const name = card.getAttribute("data-name").toLowerCase();
+        const company = card.getAttribute("data-company").toLowerCase();
+        card.style.display = name.includes(query) || company.includes(query) ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
