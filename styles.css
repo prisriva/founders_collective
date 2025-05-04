@@ -1,0 +1,107 @@
+/* Root theme colors */
+:root {
+    --red: #8C1C13;
+    --white: #ffffff;
+    --dark-bg: #1e1e1e;
+    --dark-text: #f5f5f5;
+    --light-text: #111;
+  }
+  
+  /* Reset & Base Styles */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--light-text);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  header, footer {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 1rem;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1, h2 {
+    margin: 0.5em 0;
+  }
+  
+  nav a.box {
+    margin: 0 0.5em;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+  }
+  
+  nav a.box:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  /* Toggle button */
+  #themeToggle {
+    background-color: var(--white);
+    color: var(--red);
+    border: 2px solid var(--red);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+  }
+  
+  #themeToggle:hover {
+    background-color: var(--red);
+    color: var(--white);
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+  }
+  
+  body.dark-mode header, body.dark-mode footer {
+    background-color: #2e2e2e;
+  }
+  
+  body.dark-mode nav a.box {
+    color: var(--dark-text);
+  }
+  
+  body.dark-mode #themeToggle {
+    background-color: var(--dark-text);
+    color: var(--red);
+    border-color: var(--dark-text);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    body { font-size: 16px; }
+  }
+  
+  @media (max-width: 768px) {
+    body { font-size: 15px; }
+    nav.container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body { font-size: 14px; }
+    nav a.box {
+      display: block;
+      margin: 0.3em 0;
+    }
+  }
+  
