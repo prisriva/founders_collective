@@ -2,19 +2,20 @@
 :root {
     --red: #8C1C13;
     --white: #ffffff;
-    --dark-bg: #1e1e1e;
+    --dark-bg: #450c0c;
     --dark-text: #f5f5f5;
-    --light-text: #111;
+    --light-text: #3d0b0b;
   }
   
-  /* Reset & Base Styles */
+  /* FONT AND BASE STYLES */
   body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: var(--white);
     color: var(--light-text);
     transition: background-color 0.3s, color 0.3s;
   }
+  
   
   header, footer {
     background-color: var(--red);
