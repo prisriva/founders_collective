@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Bay Founders Collective</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN1PTV33P4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RN1PTV33P4');
+  </script>
+</head>
+<body class="light-mode">
+  <header>
+    <div class="container">
+      <h1>Bay Founders Collective</h1>
+      <nav class="container">
+        <a href="index.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Home'})">Home</a>
+        <a href="about.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'About'})">About</a>
+        <a href="founders.html" class="box">Founders</a>
+        <a href="resources.html" class="box">Resources</a>
+        <a href="gallery.html" class="box">Gallery</a>
+        <a href="contact.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Contact'})">Contact</a>
+      </nav>
+      <button id="themeToggle">Toggle Dark/Light</button>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>About the Collective</h2>
+      <p>Bay Founders Collective is a growing community of startup founders, builders, and visionaries based in the heart of the Bay Area. We’re driven by collaboration, innovation, and mutual support.</p>
+    </section>
+
+    <section>
+      <h3>🚀 Our Mission</h3>
+      <p>To provide every founder with access to the tools, people, and inspiration they need to turn bold ideas into real-world impact.</p>
+    </section>
+
+    <section>
+      <h3>🌉 Why the Bay?</h3>
+      <p>The Bay Area isn’t just a tech hub — it’s a global magnet for dreamers. We exist to make sure local founders have the community infrastructure they deserve.</p>
+    </section>
+
+    <section>
+      <h3>🤝 What We Offer</h3>
+      <ul>
+        <li>Mentorship circles & community events</li>
+        <li>Pitch practice and accelerator prep</li>
+        <li>Founder features and media amplification</li>
+        <li>Peer-to-peer learning and knowledge sharing</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bay Founders Collective</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
