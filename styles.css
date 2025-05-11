@@ -58,11 +58,12 @@ h1, h2 {
 }
 
 /*--------------NAV----------------------- */
+/
 nav a.box {
   margin: 0 0.75em;
-  text-decoration: none;
+  text-decoration: none !important;
   color: white !important;
-  font-weight: 700;
+  font-weight: 700 !important;
   font-size: 1.05rem;
   padding: 0.3rem 0.6rem;
   border-radius: 8px;
@@ -70,7 +71,8 @@ nav a.box {
 }
 
 nav a.box:visited {
-  color: white;
+  color: white !important;
+  text-decoration: none !important;
 }
 
 nav a.box:hover {
