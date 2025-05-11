@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resources | Bay Founders Collective</title>
+  <title>Affiliate | Bay Founders Collective</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 
@@ -24,7 +24,7 @@
         <a href="index.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Home'})">Home</a>
         <a href="about.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'About'})">About</a>
         <a href="founders.html" class="box">Founders</a>
-        <a href="resources.html" class="box">Resources</a>
+        <a href="affiliate.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Affiliate'})">Affiliate</a>
         <a href="gallery.html" class="box">Gallery</a>
         <a href="contact.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Contact'})">Contact</a>
       </nav>
@@ -34,37 +34,28 @@
 
   <main>
     <section>
-      <h2>Resources for Founders</h2>
-
-      <div class="resource-card">
-        <h3>🗓️ Events</h3>
-        <p>Attend networking nights, demo days, and investor panels hosted around the Bay Area.</p>
-        <div class="calendar-placeholder">[Calendar Widget Coming Soon]</div>
-      </div>
-
-      <div class="resource-card">
-        <h3>🚀 Accelerators</h3>
-        <div class="accelerator-list">
-          <div class="accelerator-item">
-            <h4>Y Combinator</h4>
-            <p>The most renowned early-stage startup accelerator in the world. Batch-based mentorship and funding.</p>
-          </div>
-          <div class="accelerator-item">
-            <h4>Techstars</h4>
-            <p>Funding and 3-month mentorship-driven programs in key verticals like fintech, AI, and mobility.</p>
-          </div>
-          <div class="accelerator-item">
-            <h4>500 Startups</h4>
-            <p>Global venture capital firm offering accelerator programs in growth hacking and product-market fit.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="resource-card">
-        <h3>📄 Pitch Deck Templates</h3>
-        <p>We’re collecting sample decks from top startups and experts. Check back soon!</p>
-        <div class="loading-box">Loading soon...</div>
-      </div>
+      <h2>Founder Affiliates</h2>
+      <p>Support your fellow builders by exploring their websites below:</p>
+      <ul>
+        <li>
+          <a href="https://peer1-site.com" target="_blank" rel="noopener noreferrer"
+             onclick="gtag('event', 'CTR', { event_category: 'callToAction', event_label: 'Peer 1' });">
+            Visit Peer 1’s Site
+          </a>
+        </li>
+        <li>
+          <a href="https://peer2-site.com" target="_blank" rel="noopener noreferrer"
+             onclick="gtag('event', 'CTR', { event_category: 'callToAction', event_label: 'Peer 2' });">
+            Visit Peer 2’s Site
+          </a>
+        </li>
+        <li>
+          <a href="https://peer3-site.com" target="_blank" rel="noopener noreferrer"
+             onclick="gtag('event', 'CTR', { event_category: 'callToAction', event_label: 'Peer 3' });">
+            Visit Peer 3’s Site
+          </a>
+        </li>
+      </ul>
     </section>
   </main>
 

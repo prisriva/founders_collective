@@ -1,19 +1,55 @@
-const toggleButton = document.getElementById("themeToggle");
-const body = document.body;
+// ---------- COOKIE UTILS ----------
+function setCookie(name, value, days = 7) {
+  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+  document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/`;
+}
 
-toggleButton.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-
-  // Optional: Save preference to localStorage
-  const isDark = body.classList.contains("dark-mode");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
-});
-
-// On page load: Apply saved theme
-window.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    body.classList.add("dark-mode");
+function getCookie(name) {
+  const cookies = document.cookie.split('; ');
+  for (let c of cookies) {
+    const [key, value] = c.split('=');
+    if (key === name) return decodeURIComponent(value);
   }
-});
+  return null;
+}
 
+// ---------- FIRST-TIME PROMPT ----------
+let userName = getCookie('name');
+let userTheme = getCookie('theme');
+
+if (!userName || !userTheme) {
+  userName = prompt("What’s your name?");
+  userTheme = prompt("Do you prefer dark or light theme?").toLowerCase();
+  setCookie('name', userName);
+  setCookie('theme', userTheme);
+}
+
+// ---------- APPLY THEME ----------
+function applyTheme(theme) {
+  const body = document.body;
+  if (theme === 'dark') {
+    body.classList.add('dark-mode');
+  } else {
+    body.classList.remove('dark-mode');
+  }
+}
+
+if (userTheme) applyTheme(userTheme);
+
+// ---------- THEME TOGGLE SUPPORT ----------
+const toggleButton = document.getElementById("themeToggle");
+if (toggleButton) {
+  toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const newTheme = document.body.classList.contains("dark-mode") ? "dark" : "light";
+    setCookie("theme", newTheme);
+  });
+}
+
+// ---------- SHOW GREETING ONLY ON INDEX ----------
+if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
+  const welcome = document.getElementById("welcome-message");
+  if (welcome && userName) {
+    welcome.textContent = `Welcome back, ${userName}`;
+  }
+}
