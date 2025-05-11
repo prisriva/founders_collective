@@ -53,3 +53,13 @@ if (window.location.pathname.endsWith("index.html") || window.location.pathname 
     welcome.textContent = `Welcome back, ${userName}`;
   }
 }
+
+/* nav bar responsive */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}
