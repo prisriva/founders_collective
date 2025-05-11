@@ -7,26 +7,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN1PTV33P4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-RN1PTV33P4');
   </script>
 </head>
 <body class="light-mode">
   <header>
-    <h1 class="site-title">Bay Founders Collective</h1>
+    <h1 class="site-title" style="color: white; font-weight: 700;">Bay Founders Collective</h1>
     <span id="menuToggle" class="hamburger">&#9776;</span>
     <ul id="navLinks" class="nav-links">
-      <li><a href="index.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Home'})">Home</a></li>
-      <li><a href="about.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'About'})">About</a></li>
-      <li><a href="founders.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Founders'})">Founders</a></li>
-      <li><a href="affiliate.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Affiliate'})">Affiliate</a></li>
-      <li><a href="gallery.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Gallery'})">Gallery</a></li>
-      <li><a href="contact.html" class="box" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Contact'})">Contact</a></li>
+      <li><a href="index.html" class="box" style="color:white; font-weight:700;" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Home'})">Home</a></li>
+      <li><a href="about.html" class="box" style="color:white; font-weight:700;" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'About'})">About</a></li>
+      <li><a href="founders.html" class="box" style="color:white; font-weight:700;" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Founders'})">Founders</a></li>
+      <li><a href="affiliate.html" class="box" style="color:white; font-weight:700;" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Affiliate'})">Affiliate</a></li>
+      <li><a href="gallery.html" class="box" style="color:white; font-weight:700;" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Gallery'})">Gallery</a></li>
+      <li><a href="contact.html" class="box" style="color:white; font-weight:700;" onclick="gtag('event', 'nav_click', {event_category: 'navigation', event_label: 'Contact'})">Contact</a></li>
     </ul>
     <button id="themeToggle">Toggle Dark/Light</button>
   </header>
