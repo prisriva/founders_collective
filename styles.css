@@ -69,12 +69,12 @@ nav a.box {
   border-radius: 8px;
   transition: all 0.3s ease;
 }
-
+/*
 nav a.box:visited {
   color: white !important;
   text-decoration: none !important;
 }
-
+*/
 nav a.box:hover {
   background-color: rgba(255, 255, 255, 0.15);
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
