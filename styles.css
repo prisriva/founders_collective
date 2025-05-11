@@ -16,13 +16,7 @@
     transition: background-color 0.3s, color 0.3s;
   }
   
-/*  
-  header, footer {
-    background-color: var(--red);
-    color: var(--white);
-    padding: 1rem;
-  }
-  */
+/* Header, background */
   header {
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/golden-gate.jpg');
@@ -46,7 +40,8 @@
   }
   
   
-  /* Keep the footer styles as they are */
+/*footer */
+
   footer {
     background-color: var(--red);
     color: var(--white);
@@ -63,6 +58,11 @@
   h1, h2 {
     margin: 0.5em 0;
   }
+  
+
+
+  /*--------------NAV */
+
   
   nav a.box {
     margin: 0 0.75em;
