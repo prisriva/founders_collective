@@ -61,12 +61,16 @@ h1, h2 {
 nav a.box {
   margin: 0 0.75em;
   text-decoration: none;
-  color: white;
-  font-weight: 600;
+  color: white !important;
+  font-weight: 700;
   font-size: 1.05rem;
   padding: 0.3rem 0.6rem;
   border-radius: 8px;
   transition: all 0.3s ease;
+}
+
+nav a.box:visited {
+  color: white;
 }
 
 nav a.box:hover {
@@ -161,7 +165,7 @@ body.dark-mode header, body.dark-mode footer {
 }
 
 body.dark-mode nav a.box {
-  color: var(--dark-text);
+  color: var(--dark-text) !important;
 }
 
 body.dark-mode #themeToggle {
