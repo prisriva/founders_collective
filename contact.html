@@ -29,6 +29,7 @@
         <li><a href="gallery.html" class="box" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Gallery' })">Gallery</a></li>
         <li><a href="contact.html" class="box" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Contact' })">Contact</a></li>
       </ul>
+
       <button id="themeToggle">Toggle Dark/Light</button>
     </nav>
   </header>
@@ -47,8 +48,12 @@
 
         <label for="message">Message:</label>
         <textarea id="message" name="Message" rows="6" required></textarea>
-
-        <button type="submit">Send Message</button>
+<!-- ADDITIONAL CALL TO ACTION IN SUBMISSION FORM BUTTON BELOW -->
+        <button type="submit" onclick="gtag('event', 'CTR', {
+          event_category: 'callToAction',
+          event_label: 'Send Message'
+        });">Send Message</button>
+        
       </form>
     </section>
   </main>
