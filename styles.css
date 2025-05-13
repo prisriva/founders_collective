@@ -344,15 +344,17 @@ body.dark-mode .contact-form textarea {
 .contact-form button:hover {
   background-color: #a42a1a;
 }
-/* Responsive images inside figure or main content */
-main img, figure img {
-  max-width: 100%;
+
+
+/* Make About page images responsive */
+.about-img {
+  width: 100%;
+  max-width: 800px;
   height: auto;
   display: block;
   margin: 1rem auto;
 }
 
-/* Optional: style the figcaption for smaller screens */
 figure {
   text-align: center;
   margin-bottom: 2rem;
@@ -361,7 +363,6 @@ figure {
 figure figcaption {
   font-size: 0.85rem;
   color: #666;
-  margin-top: 0.5rem;
   line-height: 1.4;
 }
 
