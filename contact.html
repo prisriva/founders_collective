@@ -36,7 +36,7 @@
       <h2>Get in Touch</h2>
       <p>We're excited to hear from you! Whether you're a founder, investor, or community member, drop us a line.</p>
 
-      <form class="contact-form" action="mailto:info@congiviewsolutions.com" method="POST" enctype="text/plain">
+      <form class="contact-form">
         <label for="name">Name:</label>
         <input type="text" id="name" name="Name" required />
 
@@ -45,18 +45,14 @@
 
         <label for="message">Message:</label>
         <textarea id="message" name="Message" rows="6" required></textarea>
-<!-- ADDITIONAL CALL TO ACTION IN SUBMISSION FORM BUTTON BELOW -->
-<button onclick="
-  gtag('event', 'CTR', {
-    event_category: 'callToAction',
-    event_label: 'Send Message'
-  });
-  setTimeout(() => { this.form.submit(); }, 300);
-  return false;
-">Send Message</button>
 
-
-        
+        <button type="button" onclick="
+          gtag('event', 'CTR', {
+            event_category: 'callToAction',
+            event_label: 'Send Message'
+          });
+          alert('Thanks! Your message has been recorded.');
+        ">Send Message</button>
       </form>
     </section>
   </main>
