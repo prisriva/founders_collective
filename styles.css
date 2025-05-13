@@ -369,3 +369,48 @@ figure figcaption {
 body.dark-mode figure figcaption {
   color: #bbb;
 }
+
+/* index images */
+/* Home page image section */
+.homepage-visuals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.homepage-card {
+  flex: 1 1 400px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.homepage-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 0.5rem;
+}
+
+.homepage-card figcaption {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+body.dark-mode .homepage-card figcaption {
+  color: #bbb;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .homepage-visuals {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage-card {
+    width: 90%;
+  }
+}
