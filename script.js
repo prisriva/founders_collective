@@ -16,14 +16,18 @@ function getCookie(name) {
 // ---------- FIRST-TIME PROMPT ----------
 let userName = getCookie('name');
 let userTheme = getCookie('theme');
-
 if (!userName || !userTheme) {
-  userName = prompt("What’s your name?") || "Guest";
-  userTheme = (prompt("Do you prefer dark or light theme?") || "light").toLowerCase();
-  if (userTheme !== "dark" && userTheme !== "light") userTheme = "light";
-  setCookie('name', userName);
-  setCookie('theme', userTheme);
+userName = prompt("What's your name?");
+userTheme = prompt("Do you prefer dark or light theme?").toLowerCase();
+document.cookie = `name=${userName}; max-age=${60 * 60 * 24 * 7}; path=/`;
+document.cookie = `theme=${userTheme}; max-age=${60 * 60 * 24 * 7}; path=/`;
 }
+// Apply personalized greeting
+const welcome = document.getElementById("welcome-message");
+if (welcome && userName) {
+welcome.textContent = `Welcome back, ${userName}`;
+}
+
 
 // ---------- APPLY THEME ----------
 function applyTheme(theme) {
