@@ -58,7 +58,6 @@ h1, h2 {
 }
 
 /*--------------NAV----------------------- */
-/
 nav a.box {
   margin: 0 0.75em;
   text-decoration: none !important;
@@ -69,12 +68,7 @@ nav a.box {
   border-radius: 8px;
   transition: all 0.3s ease;
 }
-/*
-nav a.box:visited {
-  color: white !important;
-  text-decoration: none !important;
-}
-*/
+
 nav a.box:hover {
   background-color: rgba(255, 255, 255, 0.15);
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
@@ -412,4 +406,9 @@ body.dark-mode .homepage-card figcaption {
   .homepage-card {
     width: 90%;
   }
+}
+
+/* ✅ FIX: Make founder-card text readable in dark mode */
+body.dark-mode .founder-card {
+  color: var(--light-text);
 }
