@@ -72,6 +72,14 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const refCode = urlParams.get('ref');
+    if (refCode) {
+      localStorage.setItem('referralCode', refCode);
+    }
+  </script>
+  
 </body>
 </html>
 
