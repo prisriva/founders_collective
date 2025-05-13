@@ -50,7 +50,6 @@
             <a href="mailto:alexander@abccompany.com" class="contact-btn">Contact</a>
           </div>
         </div>
-        
 
         <div class="founder-card" data-name="Christina Lee" data-company="XYZ Company">
           <div class="company-bg" style="background-image: url('https://via.placeholder.com/150x60?text=XYZ+Company');">
@@ -65,7 +64,7 @@
             <a href="mailto:christina@xyzcompany.com" class="contact-btn">Contact</a>
           </div>
         </div>
-        
+      </div>
     </section>
   </main>
 
@@ -87,6 +86,15 @@
         card.style.display = name.includes(query) || company.includes(query) ? "block" : "none";
       });
     });
+  </script>
+
+  <!-- ✅ Referral code tracker -->
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const refCode = urlParams.get('ref');
+    if (refCode) {
+      localStorage.setItem('referralCode', refCode);
+    }
   </script>
 </body>
 </html>
