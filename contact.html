@@ -46,14 +46,7 @@
         <label for="message">Message:</label>
         <textarea id="message" name="Message" rows="6" required></textarea>
 
-        <button type="button" onclick="
-        gtag('event', 'CTR', {
-          event_category: 'callToAction',
-          event_label: 'Send Message'
-        });
-        console.log('CTR event fired');
-      ">Send Message</button>
-      
+        <button type="button" id="sendMessageBtn">Send Message</button>
       </form>
     </section>
   </main>
@@ -63,5 +56,16 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- CTA Button Tracking Script -->
+  <script>
+    document.getElementById('sendMessageBtn').addEventListener('click', function () {
+      gtag('event', 'CTR', {
+        event_category: 'callToAction',
+        event_label: 'Send Message'
+      });
+      alert('Thanks! Your message has been recorded.');
+    });
+  </script>
 </body>
 </html>
