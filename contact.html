@@ -47,12 +47,13 @@
         <textarea id="message" name="Message" rows="6" required></textarea>
 
         <button type="button" onclick="
-          gtag('event', 'CTR', {
-            event_category: 'callToAction',
-            event_label: 'Send Message'
-          });
-          alert('Thanks! Your message has been recorded.');
-        ">Send Message</button>
+        gtag('event', 'CTR', {
+          event_category: 'callToAction',
+          event_label: 'Send Message'
+        });
+        console.log('CTR event fired');
+      ">Send Message</button>
+      
       </form>
     </section>
   </main>
